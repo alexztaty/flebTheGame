@@ -17,6 +17,8 @@ function fadeOnScroll(element) {
   }
   if (opacity >= 0) {
 	document.getElementById('crest').style.opacity = opacity; 
+		document.getElementById('scrollDown').style.opacity = opacity; 
+
   }
 }
 function scrollHandler() {
