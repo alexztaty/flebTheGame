@@ -107,6 +107,7 @@ li a:hover:not(.active) {
 
 .fade{ /*the main text content on the page */
   font-family: flebFont;
+	font-color: white;
 position:relative;
 	top: 120px;
 	justify-content: center;
