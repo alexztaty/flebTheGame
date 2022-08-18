@@ -106,6 +106,21 @@ li a:hover:not(.active) {
 }
 
 .fade{ /*the main text content on the page */
+opacity:0;
+  font-family: flebFont;
+  color: white;
+position:relative;
+	top: 120px;
+	justify-content: center;
+	text-align: center;
+	width: 50vw; 
+	margin: 0 auto; 
+z-index: -100;
+  text-shadow: 1.5px 1.5px #222;
+
+}
+
+.textplace{ /*the main text content on the page */
   font-family: flebFont;
   color: white;
 position:relative;
@@ -115,13 +130,14 @@ position:relative;
 	width: 70vw; 
 	margin: 0 auto; 
 z-index: -100;
-    -webkit-text-stroke: 0.5px black; /* width and color */
+    -webkit-text-stroke: 0.2px #200037; /* width and color */
 
 }
 
 img {
     max-width: 80%;
     height: auto;
+	
 }
 
 .footer {

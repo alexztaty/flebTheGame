@@ -18,6 +18,8 @@ function fadeOnScroll(element) {
   if (opacity >= 0) {
 	document.getElementById('crest').style.opacity = opacity; 
 		document.getElementById('scrollDown').style.opacity = opacity; 
+				document.getElementById('sticky').style.opacity = 1- opacity /2; 
+
 
   }
 }
