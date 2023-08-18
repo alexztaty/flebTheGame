@@ -108,6 +108,8 @@ li a:hover:not(.active) {
 .fade{ /*the main text content on the page */
 opacity:0;
   font-family: flebFont;
+  background-color:gray;
+  padding: 3vw;
   color: white;
 position:relative;
 	top: 120px;
@@ -117,6 +119,14 @@ position:relative;
 	margin: 0 auto; 
 z-index: -100;
   text-shadow: 1.5px 1.5px #222;
+  
+  background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
 
 }
 
@@ -142,7 +152,7 @@ img {
 
 .footer {
 position:relative;
-top: 120px;
+top: 20vh;
   padding: 20px;
   text-align:center;
 }
