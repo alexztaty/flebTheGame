@@ -22,10 +22,35 @@
 	<body>
 	
 	<script src="scroll.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".videoHolder").click(function () {
+            // Create the iframe element with autoplay
+            var iframe = document.createElement("iframe");
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.src = "https://www.youtube.com/embed/t_d7cb_Ibfk?autoplay=1"; // Add autoplay
+            iframe.title = "Fleb The Game Promotional Video / How To Play";
+            iframe.frameBorder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.allowFullscreen = true;
+
+            // Replace the content of the div with the iframe
+            $(this).empty().append(iframe);
+        });
+    });
+</script>
+
+<script src="https://www.youtube.com/iframe_api"></script>
 
     
 	
-		
+	<div class = "videoHolder" style="width: 56vw; padding:0px; overflow:hidden; aspect-ratio:16 / 9;display: flex; justify-content: center; align-items: center;">
+    <img src="youtubeplay.svg" alt="Video Thumbnail" style="width: 8%; margin: auto;">
+
+	</div>
+	
 	
 	<div class = "fade">
 	  	<div id='product-component-1692348056834'></div>
@@ -130,25 +155,25 @@
         "padding-right": "43px"
       },
       "title": {
-        "font-family": "Helvetica Neue, sans-serif",
+        "font-family": "Roboto, sans-serif",
         "font-weight": "bold",
-        "font-size": "26px",
+        "font-size": "13px",
         "color": "#4c4c4c"
       },
       "price": {
-        "font-family": "Helvetica Neue, sans-serif",
+        "font-family": "Roboto, sans-serif",
         "font-weight": "normal",
-        "font-size": "18px",
+        "font-size": "14px",
         "color": "#4c4c4c"
       },
       "compareAt": {
-        "font-family": "Helvetica Neue, sans-serif",
+        "font-family": "Roboto, sans-serif",
         "font-weight": "normal",
         "font-size": "15.299999999999999px",
         "color": "#4c4c4c"
       },
       "unitPrice": {
-        "font-family": "Helvetica Neue, sans-serif",
+        "font-family": "Roboto, sans-serif",
         "font-weight": "normal",
         "font-size": "15.299999999999999px",
         "color": "#4c4c4c"
@@ -173,8 +198,50 @@
 })();
 /*]]>*/
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+</style>
 	</div>
-	
+	<a href="https://www.kickstarter.com/projects/fleb-the-game/fleb-the-drinking-game/" target="_blank">
+
+	<div class = "fade" style="display:flex; justify-content:space-around;align-items: center;flex-direction:row;">
+	    <img src="kickstarter.png" alt="Video Thumbnail" style="width: 40%;">
+
+	Learn more on our Kickstarter page
+	</div>
+		</a>
+		
+		<a href="./thanks.html">
+
+	<div class = "fade" style="display:flex; justify-content:space-around;align-items: center;flex-direction:row;overflow:hidden;">
+	    <img src="./thanks.png" alt="Video Thumbnail" style="width: 40%;">
+
+	Thanks to everyone who supported the Kickstarter!<br>See the list here
+	</div>
+		</a>
+		
+			<a href="./rules.html">
+
+	<div class = "fade" style="display:flex; justify-content:space-around;align-items: center;flex-direction:column;overflow:hidden;">
+	    <img src="./rulesthumb.svg" alt="Video Thumbnail" style="width: 80%;">
+	</div>
+		</a>
+		
+					<a href="./disclaimer.html">
+
+	<div class = "fade" style="display:flex; justify-content:space-around;align-items: center;flex-direction:row;overflow:hidden;">
+	    <img src="./disclaimerthumb.svg" alt="Video Thumbnail" style="width: 80%;">
+	</div>
+		</a>
+		
+					<a href="./review.html">
+
+	<div class = "fade" style="display:flex; justify-content:space-around;align-items: center;flex-direction:row;overflow:hidden;">
+	    <img src="./review.png" alt="Video Thumbnail" style="width: 40%;">
+
+	Please leave us a review<br>if you've bought a copy!<br>We would love your feedback!
+	</div>
+		</a>
 <div class="footer">
 <a href="http://instagram.com/FlebTheGame"><img src="IGWhite.png" width="32px" alt="Instagram" /></a>
 <a href="http://facebook.com/FlebTheGame"><img src="FBWhite.png" width="32px" alt="Facebook" /></a>

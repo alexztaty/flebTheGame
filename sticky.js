@@ -1,35 +1,27 @@
-$(document).ready(function(){       
-   var scroll_start = 0;
-   var startchange = $('#sticky');
-   var offset = startchange.offset();
-    if (startchange.length){
-   $(document).scroll(function() { 
-      var distance = $(window).width();
-      scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-          $('.sticky').css('position', 'fixed');
-          $('.sticky').css('top', '0');
-       } 
-	   if(scroll_start < offset.top) {
-          $('.sticky').css('position', 'absolute');
-          $('.sticky').css('top', '100vh');
-       } 
-   });
-    }
-});
-$(window).on("load",function() {
-  $(window).scroll(function() {
-    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-    $(".fade").each(function() {
-      /* Check the location of each desired element */
-      var objectBottom = $(this).offset().top + $(this).outerHeight();
+// Function to check if an element is partially in the viewport with a buffer
+function isElementPartiallyInViewport(element, buffer = 100) {
+  const rect = element.getBoundingClientRect();
+  return (
+    rect.bottom >= 0 - buffer &&
+    rect.right >= 0 - buffer &&
+    rect.top <= (window.innerHeight || document.documentElement.clientHeight) + buffer &&
+    rect.left <= (window.innerWidth || document.documentElement.clientWidth) + buffer
+  );
+}
 
-      /* If the element is completely within bounds of the window, fade it in */
-      if (objectBottom - 75 < windowBottom) { //object comes into view (scrolling down)
-        if ($(this).css("opacity")==0) {$(this).fadeTo(450,1);}
-      } else { //object goes out of view (scrolling up)
-        if ($(this).css("opacity")==1) {$(this).fadeTo(50,1);}
-      }
-    });
-  }).scroll(); //invoke scroll-handler on page-load
-});
+// Function to handle the scroll event
+function handleScroll() {
+  const fadeElements = document.querySelectorAll('.fade');
+
+  fadeElements.forEach((element) => {
+    if (isElementPartiallyInViewport(element, 100)) {
+      element.classList.add('fade-in');
+    }
+  });
+}
+
+// Add a scroll event listener to trigger the fading effect
+window.addEventListener('scroll', handleScroll);
+
+// Initially check if "fade" elements are in the viewport on page load
+handleScroll();

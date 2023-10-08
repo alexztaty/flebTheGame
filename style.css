@@ -1,4 +1,5 @@
 body { /*animated background */
+font-family: 'Roboto', sans-serif;
 	left:0;
 	margin:0;
 	background-image: linear-gradient(45deg,#FFCC33,#660099);  
@@ -47,78 +48,34 @@ body { /*animated background */
 	
 }
 
-.sticky {
-  width: 100%;
-  position: absolute;
-  top: 100vh;
-}
-.sticky2 {
-  width: 100%;
-  position: fixed;
-  top: 0;
-}
-
-@font-face {
-  font-family: flebFont;
-  src: url(FLEB.otf);
-}
+.videoHolder{
+  padding: 3vw;
+position:relative;
+	margin: 0 auto; 
+	margin-bottom: 3%;
+  background: rgba(255, 255, 255, 0);
+  background-image: url("./Placeholder.jpg");
+  background-size:56vw;
+border-radius: 16px;
+cursor: pointer;
 
 
+
+}
 	
-
-.nav-bar{
-	position:absolute;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 20px;
-  overflow: hidden;
-  background-color: #6C3483;
-  color: white;
-}
-
-li {
-  float: left;
-}
-
-li a {
-	  font-family: flebFont;
-
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a.active {
-  background-color:  #553470;
-  box-shadow: 0 0 5px 5px #553470;
-  color: white;
-}
-
-li a:hover:not(.active) {
-   background-color:  #553470;
-  box-shadow: 0 0 5px 5px #553470;
-  color: white;
-}
-
 .fade{ /*the main text content on the page */
-opacity:0;
-  font-family: flebFont;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+font-family: 'Roboto', sans-serif;
   background-color:gray;
   padding: 3vw;
-  color: white;
+  color: black;
 position:relative;
-	top: 120px;
 	justify-content: center;
 	text-align: center;
 	width: 50vw; 
 	margin: 0 auto; 
-z-index: -100;
-  text-shadow: 1.5px 1.5px #222;
+	margin-bottom: 3%;
   
   background: rgba(255, 255, 255, 0.2);
 border-radius: 16px;
@@ -129,25 +86,8 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 
 }
-
-.textplace{ /*the main text content on the page */
-  font-family: flebFont;
-  color: white;
-position:relative;
-	top: 120px;
-	justify-content: center;
-	text-align: left;
-	width: 70vw; 
-	margin: 0 auto; 
-z-index: -100;
-    -webkit-text-stroke: 0.2px #200037; /* width and color */
-
-}
-
-img {
-    max-width: 80%;
-    height: auto;
-	
+.fade.fade-in {
+  opacity: 1;
 }
 
 .footer {
