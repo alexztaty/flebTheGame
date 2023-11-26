@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang = "en" dir="ltr">
 
@@ -22,12 +23,43 @@
 	<body>
 	
 	<script src="scroll.js"></script>
-https://www.etsy.com/uk/listing/1597284510/fleb-the-drinking-party-game
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".videoHolder").click(function () {
+            // Create the iframe element with autoplay
+            var iframe = document.createElement("iframe");
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.src = "https://www.youtube.com/embed/t_d7cb_Ibfk?autoplay=1"; // Add autoplay
+            iframe.title = "Fleb The Game Promotional Video / How To Play";
+            iframe.frameBorder = "0";
+            iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.allowFullscreen = true;
+
+            // Replace the content of the div with the iframe
+            $(this).empty().append(iframe);
+        });
+    });
 </script>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-</style>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+
+    
+	
+	<div class = "videoHolder" style="width: 56vw; padding:0px; overflow:hidden; aspect-ratio:16 / 9;display: flex; justify-content: center; align-items: center;">
+    <img src="youtubeplay.svg" alt="Video Thumbnail" style="width: 8%; margin: auto;">
+
 	</div>
+	<a href="https://www.etsy.com/uk/listing/1597284510/fleb-the-drinking-party-game" target="_blank">
+
+	<div class = "fade" style="display:flex; justify-content:space-around;align-items: center;flex-direction:row;">
+	    <img src="Etsy.jpg" alt="Video Thumbnail" style="width: 40%;">
+
+	Purchase on our Etsy page!
+	</div>
+		</a>
+	
 	<a href="https://www.kickstarter.com/projects/fleb-the-game/fleb-the-drinking-game/" target="_blank">
 
 	<div class = "fade" style="display:flex; justify-content:space-around;align-items: center;flex-direction:row;">
